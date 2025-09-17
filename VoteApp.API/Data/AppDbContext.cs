@@ -34,6 +34,12 @@ namespace VoteApp.API.Data
             modelBuilder.Entity<Vote>()
                 .HasIndex(v => new { v.VoterId, v.CandidateId })
                 .IsUnique();
+
+
+            // Seeders
+
+            
+
         }
     }
 }

@@ -164,3 +164,4 @@ D:\Travail\.Net Projects\VoteApp.API\obj\Debug\net9.0\refint\VoteApp.API.dll
 D:\Travail\.Net Projects\VoteApp.API\obj\Debug\net9.0\VoteApp.API.pdb
 D:\Travail\.Net Projects\VoteApp.API\obj\Debug\net9.0\VoteApp.API.genruntimeconfig.cache
 D:\Travail\.Net Projects\VoteApp.API\obj\Debug\net9.0\ref\VoteApp.API.dll
+D:\Travail\.Net Projects\VoteApp.API\obj\Debug\net9.0\VoteApp.API.sourcelink.json

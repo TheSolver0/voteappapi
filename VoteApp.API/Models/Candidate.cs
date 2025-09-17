@@ -10,7 +10,7 @@ public class Candidate
     
     public required string FullName { get; set; }
 
-    public required string PhotoUrl { get; set; }
+    public  string? PhotoUrl { get; set; }
 
     
     public int CampaignId { get; set; }

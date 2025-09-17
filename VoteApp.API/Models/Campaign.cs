@@ -19,5 +19,5 @@ public class Campaign
 
     public bool IsActive => DateTime.UtcNow >= StartDate && DateTime.UtcNow <= EndDate;
 
-    public required ICollection<Candidate> Candidates { get; set; }
+    public  ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 }

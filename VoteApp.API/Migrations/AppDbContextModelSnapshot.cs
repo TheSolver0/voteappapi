@@ -55,7 +55,6 @@ namespace VoteApp.API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
