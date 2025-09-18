@@ -9,5 +9,9 @@ namespace VoteApp.API.Models.Dto
 
         [Required]
         public int CandidateId { get; set; }
+
+        
+
+
     }
 }

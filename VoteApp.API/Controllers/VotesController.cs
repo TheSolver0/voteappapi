@@ -19,10 +19,16 @@ namespace VoteApp.API.Controllers
 
         // GET: api/votes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vote>>> GetVotes()
+        public async Task<ActionResult<IEnumerable<VoteDto>>> GetVotes()
         {
             var votes = await _context.Votes.ToListAsync();
-            return Ok(votes);
+            var result = votes.Select(c => new VoteDto
+            {
+                VoterId = c.VoterId,
+                CandidateId = c.CandidateId,
+                // CandidateName = c.Candidate.FullName,
+            });
+            return Ok(result);
         }
 
         // GET: api/votes/5

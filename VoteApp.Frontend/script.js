@@ -16,6 +16,26 @@ async function loadCandidates() {
     list.appendChild(div);
   });
 }
+async function loadCampaigns() {
+  const res = await fetch(`${API_BASE_URL}/campaigns`);
+  const candidates = await res.json();
+
+  const list = document.getElementById("campaigns-list");
+
+  candidates.forEach(c => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <h1>${c.title} </h1> <br>
+      <span>${c.description}</span> <br> <br>
+
+      <span>Date de début: ${new Date(c.startDate).toLocaleDateString()}</span> <br>
+      <span>Date de fin: ${new Date(c.endDate).toLocaleDateString()}</span> <br> <br>
+      
+    `;
+    list.appendChild(div);
+  });
+}
 
 async function vote(candidateId) {
   const voterId = prompt("Entrez votre email pour voter :");
@@ -46,14 +66,16 @@ async function loadResults() {
 
   results.forEach(r => {
     const div = document.createElement("div");
-    div.innerHTML = `<strong>${r.candidateName}</strong> : ${r.votes} vote(s)`;
+    div.innerHTML = `<strong>${r.candidateId}</strong> : ${r.voterId} vote(s)`;
     container.appendChild(div);
   });
 }
 
 loadCandidates();
+loadCampaigns();
 loadResults();
 document.getElementById('themeToggle').addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
   document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
 });
+
