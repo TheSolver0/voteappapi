@@ -3,14 +3,14 @@ async function loadCandidates() {
   const candidates = await res.json();
 
   const list = document.getElementById("candidate-list");
-  list.innerHTML = "<h2>Candidats</h2>";
 
   candidates.forEach(c => {
     const div = document.createElement("div");
-    div.className = "candidate";
+    div.className = "card";
     div.innerHTML = `
       <img src="${c.photoUrl}" alt="${c.fullName}">
-      <span>${c.fullName}</span>
+      <span>${c.fullName}</span> <br> <br>
+
       <button class="vote-btn" onclick="vote('${c.id}')">Voter</button>
     `;
     list.appendChild(div);
@@ -53,3 +53,7 @@ async function loadResults() {
 
 loadCandidates();
 loadResults();
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+});

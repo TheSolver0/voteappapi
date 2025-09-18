@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>VoteApp - Élections</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="config.js"></script>
 </head>
-<body>
-  <h1>Vote pour ton candidat préféré</h1>
-  <div class="container" id="candidate-list"></div>
-  <div class="container" id="results"></div>
+
+<body class="">
+  <div class="sidebar">
+    <div class="profile-user">
+      <div class="profile">
+      <img src="1733312414472.jpeg" alt="">
+      </div>
+      <span>Luc FOTSO</span>
+    </div>
+    
+    <ul class="nav">
+      <li >
+        <a href=""><i class="fa-solid fa-gauge"></i>&nbsp;Dashboard</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fas fa-bullhorn"></i>&nbsp;Campagnes</a>
+      </li>
+      <li class="active">
+        <a href=""><i class="fas fa-user"></i>&nbsp;Candidats</a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-vote-yea"></i>&nbsp;Votes</a>
+      </li>
+
+      <li>
+        <a href=""><i class="fa fa-gear"></i>&nbsp;Paramètres</a>
+      </li>
+      <li>
+        <a href=""><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Déconnexion</a>
+      </li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="header">
+      <i class="fa-solid fa-bars"></i>
+      <div class="logo"></div>
+      <h2>VoteApp</h2>
+      <input type="text" placeholder="Rechercher..." class="search-bar">
+      <button id="themeToggle" class="theme-toggle" style="cursor: pointer;"><i class="fa-solid fa-moon"></i>&nbsp;</button>
+      <button id="" class="" style="cursor: pointer;" title="informations"><i class="fa-regular fa-circle-question"></i></button>
+      <div class="user-profile">
+        <img src="1733312414472.jpeg" alt="User Profile">
+        <span>Luc FOTSO</span>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Hello, <b>Luc!</b></h1>
+      <span>Bienvenue</span>
+      <br>
+      <br>
+      <span>Liste des Candidats</span>
+      <section class="candidate-section" id="candidate-list">
+        <!-- <div  class="candidate-list"></div> -->
+
+      </section>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
+
 </html>
